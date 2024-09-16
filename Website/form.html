@@ -23,7 +23,7 @@
             border-radius: 10px;
             justify-content: center;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            height: 20rem;
+            height: 22rem;
         }
         .button{
             width: 170px;
@@ -41,17 +41,6 @@
             border-radius: 5px;
             padding-left:5px;
         }
-        /* @keyframes myanimation{
-            0%{
-                scale: 0%;
-            }
-            100%{
-                scale:100%;
-            }
-        }
-        .container{
-            animation: 1s myanimation ease-in;
-        } */
     </style>
 </head>
 <body>
@@ -60,6 +49,7 @@
             <h2 class="title">FORM</h2><br><br>
             <input type="text" id="name" placeholder="name"><br><br>
             <input type="email" id="email" placeholder="email"><br><br>
+            <input type="number" id="age" min="0" placeholder="age"><br><br>
             <input type="tel"id="phone" placeholder="phone"><br><br>
             <input type="password" id="password" placeholder="password"><br><br>
             <input class="button" type="submit" value="SUBMIT"></button>
@@ -71,19 +61,32 @@
         e.preventDefault();
         let name=document.getElementById('name').value;
         let email=document.getElementById('email').value;
+        let age=document.getElementById('age').value;
         let phone=document.getElementById('phone').value;
         let password=document.getElementById('password').value;
+        if(name!=="" && email!=="" && password!==""){
+            if(name!=="prithiv"){
+                console.log("USer already exist.")
+            }
+            else{
+                console.log("Successful!")
+            }
+        }
         const data={
             username:name,
             useremail:email,
+            userage:age,
             userphone:phone,
-            userpassword:password
+            userpassword:password,
+            usertype:age>=18?'Major':'Minor'
         }
-        const {username,useremail,userphone,userpassword}=data;
+        const {username,useremail,userage,userphone,userpassword,usertype}=data;
         console.log(username);
         console.log(useremail);
+        console.log(userage);
         console.log(userphone);
         console.log(userpassword);
+        console.log(usertype);
     }
 </script>
 </html>
