@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 const App = () => {
-  const appname="WELCOME"
+  const appname=['WELCOME','TO','THE','LOGIN','PAGE']
   return (
     <>
     <div className="w-full">
       <Navbar appname={appname} />
     </div>
-    <div className="h-screen w-screen flex justify-center bg-slate-900 items-center">
+    <div className="h-screen w-[100%] flex justify-center bg-slate-900 items-center">
       <div className="h-[60%] w-[30%] flex justify-center items-center bg-slate-200 rounded-md shadow-4xl">
       <form className="h-[90%] w-[80%] flex flex-col justify-center items-center gap-3">
         <b>LOGIN</b>
