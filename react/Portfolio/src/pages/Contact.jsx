@@ -4,13 +4,7 @@ const Contact = () => {
   const[visible,setvisible]=useState(true)
   return (
     <>
-    {
-      visible && (
-      <>
-        <div className=""></div>
-      </>
-      )
-    }
+    <div>Contact</div>
     </>
   )
 }
