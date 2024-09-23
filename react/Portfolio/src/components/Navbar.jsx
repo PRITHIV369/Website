@@ -20,13 +20,13 @@ const Navbar = () => {
         </div>
         <ul className='flex flex-row gap-2 justify-center items-center pr-5'>
         <Link to={"/"} element={<Profile/>}>
-            <li className='p-3 hover:bg-slate-900 rounded-sm'>profile</li>
+            <li className='p-3 hover:bg-slate-900 rounded-sm'>Profile</li>
         </Link>
         <Link to={"/projects"} element={<Projects/>}>
-            <li className='p-3 hover:bg-slate-900 rounded-sm'>projects</li>
+            <li className='p-3 hover:bg-slate-900 rounded-sm'>Projects</li>
         </Link>
         <Link to={"/contact"} element={<Contact/>}>
-            <li className='p-3 hover:bg-slate-900 rounded-sm'>contact</li>
+            <li className='p-3 hover:bg-slate-900 rounded-sm'>Contact</li>
         </Link>
         <User2 className='h-8 w-8 text-white rounded-full border-2 border-white hover:bg-white  hover:border-gray-500 hover:text-gray-500' onClick={() => setvisible(true)} />
         </ul>
